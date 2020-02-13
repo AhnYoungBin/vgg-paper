@@ -28,8 +28,12 @@ VGGNet의 특징은 작은 Convolution Filter(3x3, 1 strides)로 깊은 레이�
 
 실험 내용
 ---------
+<img src="/image/1.JPG" width="80%" height="80%" title="img1" alt="img1"></img>   
+<모델의 구조와 파라미터 수 비교>
+<img src="/image/2.JPG" width="80%" height="80%" title="img1" alt="img1"></img>   
+<모델간 성능 비교>
 
-<img src="/image/1.JPG" width="80%" height="80%" title="img1" alt="img1"></img>
+
 A 모델과  A-LRN 모델 사이의 LRN layer의 유무에 따른 모델 성능을 비교  
 B 모델 ~ E 모델 간의 깊이에 따른 모델 성능의 변화를 비교
 
