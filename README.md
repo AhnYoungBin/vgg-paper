@@ -20,8 +20,7 @@ VGGNet 이전에 Convolutional Network를 활용하여 이미지 분류에서 �
 7x7 Convolution Filter를 1stack을 3x3 Convolution Filter를 3 stack으로 구현 할 수 있어 조금 더 깊이 있는 레이어를 가진  모델을 만들 수 있다. Convolution layer의 ReLU 함수의 중복으로 비선형성이 증가하게 되어 모델의 특징의 식별성 증가한다. 
    
 #### 학습 파라미터 수의 감소   
-VGGNet의 특징은 작은 Convolution Filter(3x3, 1 strides)로 깊은 레이어(16-19 weight layers)를 만들어 좋은 성능을 낸다.   
-Convolutional Network 구조를 학습할 때 1개의 Convolution Filter의 파라미터 수는 필터 크기에 해당한다. 따라서 7x7의 학습 파라미터 수는 49개 이고 3x3 Convolution Filter 3 stack 구조는 3 * 3 * 3 = 27 개이다. 이와같이 작은 크기의 Convolution Filter를 사용하여 학습 파라미터 수를 감소 시켜 학습 속도를 높힐 수 있다.
+VGGNet의 특징은 작은 Convolution Filter(3x3, 1 strides)로 깊은 레이어(16-19 weight layers)를 만들어 좋은 성능을 낸다. Convolutional Network 구조를 학습할 때 1개의 Convolution Filter의 파라미터 수는 필터 크기에 해당한다. 따라서 7x7의 학습 파라미터 수는 49개 이고 3x3 Convolution Filter 3 stack 구조는 3 * 3 * 3 = 27 개이다. 이와같이 작은 크기의 Convolution Filter를 사용하여 학습 파라미터 수를 감소 시켜 학습 속도를 높힐 수 있다.
 
 
 모델 구조
