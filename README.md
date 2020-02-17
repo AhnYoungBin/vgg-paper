@@ -7,10 +7,9 @@ Very Deep Convolutional Networks For Large-Scale Image Recognition
 논문요약
 --------
 >1. ILSVRC 2014 대회에서 2등을 차지한, Karen Simonyan과 Andrew Zisserman이 만든 CNN 모델
->2. VGGnet, GoogleNet 이전의 depth는 8layers 수준에서 머물렀다면 GoogleNet, VGGnet 이후 크게 깊어졌다.
->3. 
->4. 최근에는 이미지 특징(feature)을 추출하는 데 이용되는 등 기본 네트워크 모델로 활용되고 있음.
->5. 매우 많은 파라미터를 이용하여 연산한다는 단점이 있음.
+>2. VGGnet, GoogleNet 이전의 depth는 8layers 수준에서 머물렀다면 GoogleNet, VGGnet 이후 크게 깊어졌다. 
+>3. 최근에는 이미지 특징(feature)을 추출하는 데 이용되는 등 기본 네트워크 모델로 활용되고 있음.
+>4. 매우 많은 파라미터를 이용하여 연산한다는 단점이 있음.
 
 receptive field
 ---------------
@@ -42,5 +41,10 @@ VGGNet의 특징은 작은 Convolution Filter(3x3, 1 strides)로 깊은 레이�
 <img src="/image/4.JPG" width="80%" height="80%" title="img1" alt="img1"></img>   
 
 
-VGGNet은 224x224 크기의 color image를 input으로 하여 1개 이상의 convolutional layer 뒤에 max-pooling layer 가 오는 단순 구조로 되어 있으며 기존 CNN 구조와 마찬가지로 Fully-connected layer가 온다. sing test scale 모델 성능 비교 결과 A 모델과  A-LRN 모델 사이의 LRN layer의 유무에 따른 모델 성능을 비교한 결과 top-1 val.error와 top-5 val.error의 성능 향상이 없다고 판단하여  B 모델 ~ E 모델은 layer 깊이에 따른 모델 성능의 변화를 비교 하였다. 그 결과 망이 깊어질수록 성능 향상을 있음을 확인 하였고 single test scale을 사용한 model들과 multi-crop과 dense evaluation 을 섞어 사용한 multi test scale을 사용한 model들을 각각 성능을 비교하였다.
+VGGNet은 224x224 크기의 color image를 input으로 하여 1개 이상의 convolutional layer 뒤에 max-pooling layer 가 오는 단순 구조로 되어 있으며 기존 CNN 구조와 마찬가지로 Fully-connected layer가 온다. sing test scale 모델 성능 비교 결과 A 모델과  A-LRN 모델 사이의 LRN layer의 유무에 따른 모델 성능을 비교한 결과 top-1 val.error와 top-5 val.error의 성능 향상이 없다고 판단하여  B 모델 ~ E 모델은 layer 깊이에 따른 모델 성능의 변화를 비교 하였다. 그 결과 망이 깊어질수록 성능 향상을 있음을 확인 하였고 single test scale을 사용한 model들과 multi-crop과 dense evaluation 을 섞어 사용한 multi test scale을 사용한 model들을 각각 성능을 비교하였다. multi test scale을 사용한 모델들이 조금 더 높은 성능을 보인다.   
+   
+결론
+---------
 
+VGG 연구팀의 실험 결과를 통해 네트워크의 깊이가 깊어질수록 이미지 분류 정확도가 높아지는 것을 확인할 수 있었다.  
+모델 구조에서 Fully Connected Layer가 3개이기 때문에 파라미터 수가 1억2천만개 정도 되므로 역전파 과정 시 Convolutional layer의 중간 결과를 저장하기 때문에 많은 메모리 공간을 차지한다는 단점이 있다.   
